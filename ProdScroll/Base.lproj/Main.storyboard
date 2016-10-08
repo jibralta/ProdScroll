@@ -15,20 +15,29 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WA-nc-fUg">
+                                <color key="backgroundColor" red="0.17253346050000001" green="1" blue="0.26151717629999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="y9M-bC-z1Z"/>
+                                </constraints>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hNJ-Ma-Vjx" userLabel="ProductImages">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Gw9-XW-kSM"/>
+                                    <constraint firstAttribute="height" constant="150" id="xMW-sh-SlN"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="G4u-q2-1Dx">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="ZredwoodFence" translatesAutoresizingMaskIntoConstraints="NO" id="9MM-RM-E9K">
-                                        <frame key="frameInset" width="300" height="193"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ZredwoodFence" translatesAutoresizingMaskIntoConstraints="NO" id="9MM-RM-E9K">
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="TQV-qM-MHH"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="ZgoldPath" translatesAutoresizingMaskIntoConstraints="NO" id="QMy-Hx-VkJ">
-                                        <frame key="frameInset" minY="198" width="300" height="350"/>
-                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ZgoldPath" translatesAutoresizingMaskIntoConstraints="NO" id="QMy-Hx-VkJ"/>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -37,13 +46,22 @@
                             <constraint firstItem="G4u-q2-1Dx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="3aP-P5-qRo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G4u-q2-1Dx" secondAttribute="bottom" constant="10" id="81c-va-di8"/>
                             <constraint firstAttribute="trailing" secondItem="G4u-q2-1Dx" secondAttribute="trailing" constant="10" id="GiP-4d-HI9"/>
+                            <constraint firstItem="5WA-nc-fUg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H9f-Uv-606"/>
                             <constraint firstItem="G4u-q2-1Dx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="Vle-aT-cGt"/>
+                            <constraint firstItem="hNJ-Ma-Vjx" firstAttribute="centerX" secondItem="5WA-nc-fUg" secondAttribute="centerX" id="aBb-3V-A4l"/>
+                            <constraint firstItem="5WA-nc-fUg" firstAttribute="top" secondItem="hNJ-Ma-Vjx" secondAttribute="bottom" constant="-350" id="cih-70-8oU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5WA-nc-fUg" secondAttribute="bottom" id="tRu-9R-pwb"/>
+                            <constraint firstItem="5WA-nc-fUg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zL5-oy-KCz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="prodImages" destination="y3c-jy-aDJ" id="ckW-gX-YUx"/>
+                        <outlet property="scrollView" destination="5WA-nc-fUg" id="Hy4-9h-bam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="138.58695652173915"/>
+            <point key="canvasLocation" x="135" y="138.38028169014083"/>
         </scene>
     </scenes>
     <resources>
