@@ -18,18 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UdF-3D-MhL">
-                                <frame key="frameInset" minX="113" minY="217" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="bER-PM-rVC"/>
-                                    <constraint firstAttribute="height" constant="150" id="sbq-Wr-GFW"/>
-                                </constraints>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WA-nc-fUg">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="y9M-bC-z1Z"/>
-                                </constraints>
-                            </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="G4u-q2-1Dx">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ZredwoodFence" translatesAutoresizingMaskIntoConstraints="NO" id="9MM-RM-E9K">
@@ -40,6 +28,11 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ZgoldPath" translatesAutoresizingMaskIntoConstraints="NO" id="QMy-Hx-VkJ"/>
                                 </subviews>
                             </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WA-nc-fUg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="y9M-bC-z1Z"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -49,9 +42,7 @@
                             <constraint firstAttribute="trailing" secondItem="G4u-q2-1Dx" secondAttribute="trailing" constant="10" id="GiP-4d-HI9"/>
                             <constraint firstItem="5WA-nc-fUg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H9f-Uv-606"/>
                             <constraint firstItem="G4u-q2-1Dx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="Vle-aT-cGt"/>
-                            <constraint firstItem="UdF-3D-MhL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gOt-pf-O9U"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5WA-nc-fUg" secondAttribute="bottom" id="tRu-9R-pwb"/>
-                            <constraint firstItem="UdF-3D-MhL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uhE-PO-QnP"/>
                             <constraint firstItem="5WA-nc-fUg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zL5-oy-KCz"/>
                         </constraints>
                         <connections>
