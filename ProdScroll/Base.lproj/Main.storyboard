@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="G4u-q2-1Dx">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="G4u-q2-1Dx">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ZredwoodFence" translatesAutoresizingMaskIntoConstraints="NO" id="9MM-RM-E9K">
                                         <constraints>
@@ -39,17 +39,58 @@
                                     <constraint firstAttribute="width" constant="220" id="y9M-bC-z1Z"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyE-Gg-NUy" userLabel="BottomBar">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-yZ-7aV" userLabel="ButtonStackView">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENz-Xn-NQJ" userLabel="Scale">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="6O2-qw-BFP"/>
+                                                    <constraint firstAttribute="width" constant="30" id="wk0-wC-jE0"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="PRODscale"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAT-jD-sLa" userLabel="Upload">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="gKc-xo-faw"/>
+                                                    <constraint firstAttribute="width" constant="30" id="hYb-oD-HH0"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="PRODUpload"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7Z-xa-szy" userLabel="Rotate">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="3hq-Bx-t7J"/>
+                                                    <constraint firstAttribute="height" constant="30" id="n8B-Cc-tdN"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="PRODrotateClear"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Y7d-yZ-7aV" firstAttribute="centerX" secondItem="AyE-Gg-NUy" secondAttribute="centerX" id="0uD-WN-37a"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y7d-yZ-7aV" secondAttribute="trailing" constant="10" id="5lL-V0-ilB"/>
+                                    <constraint firstItem="Y7d-yZ-7aV" firstAttribute="centerY" secondItem="AyE-Gg-NUy" secondAttribute="centerY" id="C1N-kF-T61"/>
+                                    <constraint firstAttribute="height" constant="44" id="pTa-oM-cEK"/>
+                                    <constraint firstItem="Y7d-yZ-7aV" firstAttribute="leading" secondItem="AyE-Gg-NUy" secondAttribute="leading" constant="10" id="xza-aT-rbZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="G4u-q2-1Dx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="3aP-P5-qRo"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G4u-q2-1Dx" secondAttribute="bottom" constant="10" id="81c-va-di8"/>
-                            <constraint firstAttribute="trailing" secondItem="G4u-q2-1Dx" secondAttribute="trailing" constant="10" id="GiP-4d-HI9"/>
+                            <constraint firstItem="G4u-q2-1Dx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3aP-P5-qRo"/>
+                            <constraint firstAttribute="trailing" secondItem="AyE-Gg-NUy" secondAttribute="trailing" id="7vB-Tl-FOa"/>
+                            <constraint firstAttribute="trailing" secondItem="G4u-q2-1Dx" secondAttribute="trailing" id="GiP-4d-HI9"/>
                             <constraint firstItem="5WA-nc-fUg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H9f-Uv-606"/>
+                            <constraint firstItem="AyE-Gg-NUy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ol9-NT-cye"/>
                             <constraint firstItem="gKf-Kb-AV3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uln-GM-kGn"/>
-                            <constraint firstItem="G4u-q2-1Dx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="Vle-aT-cGt"/>
-                            <constraint firstItem="gKf-Kb-AV3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="300" id="agd-Rr-iJd"/>
+                            <constraint firstItem="G4u-q2-1Dx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="Vle-aT-cGt"/>
+                            <constraint firstItem="AyE-Gg-NUy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WAw-Ns-qbK"/>
+                            <constraint firstItem="gKf-Kb-AV3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="agd-Rr-iJd"/>
+                            <constraint firstAttribute="bottom" secondItem="AyE-Gg-NUy" secondAttribute="bottom" id="fZo-x7-xO9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G4u-q2-1Dx" secondAttribute="bottom" id="sca-n2-jUC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5WA-nc-fUg" secondAttribute="bottom" id="tRu-9R-pwb"/>
                             <constraint firstItem="5WA-nc-fUg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zL5-oy-KCz"/>
                         </constraints>
@@ -58,6 +99,8 @@
                             <outletCollection property="gestureRecognizers" destination="PmQ-cO-M9e" appends="YES" id="f9O-Co-i9C"/>
                         </connections>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bottomBackground" destination="QMy-Hx-VkJ" id="L2h-gQ-spk"/>
                         <outlet property="scrollView" destination="5WA-nc-fUg" id="Hy4-9h-bam"/>
@@ -76,10 +119,13 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="135" y="138.38028169014083"/>
+            <point key="canvasLocation" x="134.78260869565219" y="136.95652173913044"/>
         </scene>
     </scenes>
     <resources>
+        <image name="PRODUpload" width="300" height="300"/>
+        <image name="PRODrotateClear" width="300" height="300"/>
+        <image name="PRODscale" width="601" height="594"/>
         <image name="Zginko" width="150" height="350"/>
         <image name="ZgoldPath" width="350" height="350"/>
         <image name="ZredwoodFence" width="300" height="350"/>
