@@ -63,6 +63,9 @@
                                                     <constraint firstAttribute="height" constant="30" id="n8B-Cc-tdN"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="PRODrotateClear"/>
+                                                <connections>
+                                                    <action selector="rotateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pVM-zW-SIL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -88,7 +91,7 @@
                             <constraint firstItem="gKf-Kb-AV3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uln-GM-kGn"/>
                             <constraint firstItem="G4u-q2-1Dx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="Vle-aT-cGt"/>
                             <constraint firstItem="AyE-Gg-NUy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WAw-Ns-qbK"/>
-                            <constraint firstItem="gKf-Kb-AV3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="agd-Rr-iJd"/>
+                            <constraint firstItem="gKf-Kb-AV3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200" id="agd-Rr-iJd"/>
                             <constraint firstAttribute="bottom" secondItem="AyE-Gg-NUy" secondAttribute="bottom" id="fZo-x7-xO9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G4u-q2-1Dx" secondAttribute="bottom" id="sca-n2-jUC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5WA-nc-fUg" secondAttribute="bottom" id="tRu-9R-pwb"/>
@@ -104,7 +107,7 @@
                     <connections>
                         <outlet property="bottomBackground" destination="QMy-Hx-VkJ" id="L2h-gQ-spk"/>
                         <outlet property="scrollView" destination="5WA-nc-fUg" id="Hy4-9h-bam"/>
-                        <outlet property="testImageRotate" destination="5WA-nc-fUg" id="x0p-eR-ywU"/>
+                        <outlet property="testImageRotate" destination="gKf-Kb-AV3" id="ac8-VL-7K9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

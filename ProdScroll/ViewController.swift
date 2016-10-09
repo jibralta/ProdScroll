@@ -84,8 +84,19 @@ class ViewController: UIViewController {
 
     }
     
-    @IBOutlet weak var testImageRotate: UIScrollView!
+    @IBOutlet weak var testImageRotate: UIImageView!
     
+    @IBAction func rotateButtonPressed(_ sender: AnyObject) {
+        UIView.animate(withDuration: 0.4) {
+
+        self.testImageRotate.transform = self.testImageRotate.transform.rotated(by: CGFloat(M_PI_2))
+            
+            
+//        self.testImageRotate.transform = CGAffineTransform.init(rotationAngle: (90.0 * CGFloat(M_PI)) / 180.0)
+//
+//
+        }
+    }
     
 
 }
