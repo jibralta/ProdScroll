@@ -36,7 +36,7 @@
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WA-nc-fUg">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="y9M-bC-z1Z"/>
+                                    <constraint firstAttribute="width" constant="250" id="y9M-bC-z1Z"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyE-Gg-NUy" userLabel="BottomBar">

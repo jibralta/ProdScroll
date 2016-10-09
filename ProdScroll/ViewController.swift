@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             
 //            imageView.frame = CGRect(x: newX - 75, y: bottomBackground.frame.origin.y + (bottomBackground.frame.size.height / 2) - 75, width: 150, height: 150)
             
-             imageView.frame = CGRect(x: newX - 75, y: view.frame.size.height / 2 - 75, width: 150, height: 150)
+             imageView.frame = CGRect(x: newX - 75, y: (view.frame.size.height / 2) - 75, width: 150, height: 150)
             
             imageView.bringSubview(toFront: imageView)
         }
@@ -54,11 +54,11 @@ class ViewController: UIViewController {
     
     @IBAction func detectSwipe(_ sender: UISwipeGestureRecognizer) {
         
-        if sender.direction == UISwipeGestureRecognizerDirection.right && currentPage <= maxPage {
+        if sender.direction == UISwipeGestureRecognizerDirection.left && currentPage < maxPage {
             moveScrollView(direction: 1)
         }
         
-        if sender.direction == UISwipeGestureRecognizerDirection.left && currentPage >= minPage {
+        if sender.direction == UISwipeGestureRecognizerDirection.right && currentPage > minPage {
             moveScrollView(direction: -1)
         }
     }
@@ -70,7 +70,9 @@ class ViewController: UIViewController {
         
                 // Create a animation to increase the actual icon on screen
                 UIView.animate(withDuration: 0.4){
-                    self.images[self.currentPage].transform = CGAffineTransform.init(scaleX: 1.4, y: 1.4)
+                    if self.currentPage != self.maxPage || self.currentPage != self.minPage {
+                    self.images[self.currentPage].transform = CGAffineTransform.init(scaleX: 1.5, y: 1.5)
+                    }
         
                     // Revert icon size of the non-active pages
                     for x in 0..<self.images.count {
