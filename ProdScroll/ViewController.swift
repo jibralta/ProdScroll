@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var bottomBackground: UIImageView!
     
     var images = [UIImageView]()
     
@@ -36,7 +37,9 @@ class ViewController: UIViewController {
             contentWidth += newX
             scrollView.addSubview(imageView)    //adds the imageView icon to scrollView
             
-            imageView.frame = CGRect(x: newX - 75, y: (scrollView.frame.size.height / 2) - 75, width: 150, height: 150)
+//            imageView.frame = CGRect(x: newX - 75, y: bottomBackground.frame.origin.y + (bottomBackground.frame.size.height / 2) - 75, width: 150, height: 150)
+            
+             imageView.frame = CGRect(x: newX - 75, y: view.frame.size.height / 2 - 75, width: 150, height: 150)
             
             imageView.bringSubview(toFront: imageView)
         }
@@ -66,6 +69,9 @@ class ViewController: UIViewController {
         scrollView.setContentOffset(movement, animated: true)
 
     }
+    
+    @IBOutlet weak var testImageRotate: UIScrollView!
+    
     
 
 }
