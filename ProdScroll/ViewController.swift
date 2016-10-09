@@ -67,6 +67,20 @@ class ViewController: UIViewController {
         currentPage += direction
         let movement: CGPoint = CGPoint(x: scrollView.frame.size.width * CGFloat(currentPage), y: 0.0)
         scrollView.setContentOffset(movement, animated: true)
+        
+                // Create a animation to increase the actual icon on screen
+                UIView.animate(withDuration: 0.4){
+                    self.images[self.currentPage].transform = CGAffineTransform.init(scaleX: 1.4, y: 1.4)
+        
+                    // Revert icon size of the non-active pages
+                    for x in 0..<self.images.count {
+                        if (x != self.currentPage) {
+                            self.images[x].transform = CGAffineTransform.identity
+                        }
+                    }
+                }
+        
+        
 
     }
     
